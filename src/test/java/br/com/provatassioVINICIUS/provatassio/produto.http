@@ -1,0 +1,16 @@
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "id": 3,
+  "nome": "Havaianas",
+  "descricao": "Todo mundo usa",
+  "fotoUrl": "https://havaianas.com.br/dw/image",
+  "dataCadastro": "2021-09-22",
+  "horaCadastro": "13:44:52",
+  "valorUnitario": "19.90"
+}
+
+
