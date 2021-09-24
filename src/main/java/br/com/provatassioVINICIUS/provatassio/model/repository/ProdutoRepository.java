@@ -4,7 +4,6 @@ import br.com.provatassioVINICIUS.provatassio.model.entity.Produto;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProdutoRepository {
 
@@ -15,16 +14,16 @@ public class ProdutoRepository {
     }
 
 
-    public ArrayList<Produto> buscarPorNome(String nome) throws Exception {
-       String sql = "SELECT * FROM produto WHERE nome = ?";
-       ArrayList<Produto> procurar = (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{nome}, new ProdutoMappper());
+    public ArrayList<Produto> buscarProdutoFiltrado(String nome, Float valorMinimo, Float valorMaximo) throws Exception {
+       String sql = "SELECT * FROM PRODUTO WHERE nome = ? AND valor_unitario >= ? AND valor_unitario <= ?";
+       ArrayList<Produto> procurar = (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{nome, valorMinimo, valorMaximo}, new ProdutoMappper());
 
         if(procurar.size() > 0) {
-             return (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{nome}, new ProdutoMappper());
+             return (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{nome, valorMinimo, valorMaximo}, new ProdutoMappper());
         }
 
         throw new Exception("NENHUM PRODUTO ENCONTRADO");
-        
+
     }
     
     

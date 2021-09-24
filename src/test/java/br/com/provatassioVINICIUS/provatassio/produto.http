@@ -16,5 +16,5 @@ Accept: application/json
 
 ###
 
-GET http://localhost:8080/produto?nome=Tenis
+GET http://localhost:8080/produto?nome=Tenis&valorMinimo=50&valorMaximo=127.90
 Accept: application/json

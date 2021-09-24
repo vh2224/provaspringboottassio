@@ -24,10 +24,10 @@ public class ProdutoController {
         return produtoRepository.inserir(produto);
     }
 
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    public ArrayList<Produto> buscarPorNome(@RequestParam String nome) throws Exception {
-        return  produtoRepository.buscarPorNome(nome);
+    public ArrayList<Produto> buscarProduto(@RequestParam String nome, @RequestParam Float valorMinimo, @RequestParam Float valorMaximo) throws Exception {
+        return  produtoRepository.buscarProdutoFiltrado(nome, valorMinimo, valorMaximo);
     }
-
 }
