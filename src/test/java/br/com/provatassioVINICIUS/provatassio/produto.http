@@ -5,7 +5,7 @@ Accept: application/json
 
 {
   "id": 3,
-  "nome": "Havaianas",
+  "nome": "Tenis",
   "descricao": "Todo mundo usa",
   "fotoUrl": "https://havaianas.com.br/dw/image",
   "dataCadastro": "2021-09-22",
@@ -14,3 +14,7 @@ Accept: application/json
 }
 
 
+###
+
+GET http://localhost:8080/produto?nome=Tenis
+Accept: application/json
