@@ -47,7 +47,7 @@ public class ProdutoRepository {
                 jdbcTemplate.update(sql2, 4, produto.getId(), categoria.getId());
             }
 
-            List<Categoria> categoriaList = jdbcTemplate.query("SELECT c.* FROM CATEGORIA c, PRODUTO p, PRODUTO_CATEGORIA pc WHERE p.id = pc.produto_id AND c.id = pc.categoria_id AND produtoId = ?",
+            List<Categoria> categoriaList = jdbcTemplate.query("SELECT c.* FROM CATEGORIA c, PRODUTO p, PRODUTO_CATEGORIA pc WHERE p.id = pc.produto_id AND c.id = pc.categoria_id AND produto_id = ?",
                     new CategoriaMapper(), produto.getId()
             );
 
