@@ -10,11 +10,16 @@ Accept: application/json
   "fotoUrl": "https://havaianas.com.br/dw/image",
   "dataCadastro": "2021-09-22",
   "horaCadastro": "13:44:52",
-  "valorUnitario": "19.90"
+  "valorUnitario": "199.90",
+  "categoriaList": [
+    {
+      "id": 1
+    }
+  ]
 }
 
 
 ###
 
-GET http://localhost:8080/produto?nome=Tenis&valorMinimo=50&valorMaximo=127.90
+GET http://localhost:8080/produto?nome=Tenis&valorMinimo=50&valorMaximo=350
 Accept: application/json

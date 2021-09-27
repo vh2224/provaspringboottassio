@@ -7,7 +7,6 @@ public class PromocaoItem {
     private Integer id;
     private Float valorPromocao;
     private LocalDate dataCadastro;
-    private LocalTime horaCadastro;
     private LocalDate dataUltimaAtualizacao;
     private Produto produto;
     private TabelaPromocao tabelaPromocao;
@@ -34,14 +33,6 @@ public class PromocaoItem {
 
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
-    }
-
-    public LocalTime getHoraCadastro() {
-        return horaCadastro;
-    }
-
-    public void setHoraCadastro(LocalTime horaCadastro) {
-        this.horaCadastro = horaCadastro;
     }
 
     public LocalDate getDataUltimaAtualizacao() {

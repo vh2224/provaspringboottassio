@@ -11,7 +11,6 @@ public class TabelaPromocao {
     private LocalDate dataInicio;
     private LocalDate dataFim;
     private LocalDate dataCadastro;
-    private LocalTime horaCadastro;
     private LocalDate dataUltimaAtualizacao;
     private List<PromocaoItem> promocaoItemList;
 
@@ -57,14 +56,6 @@ public class TabelaPromocao {
 
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
-    }
-
-    public LocalTime getHoraCadastro() {
-        return horaCadastro;
-    }
-
-    public void setHoraCadastro(LocalTime horaCadastro) {
-        this.horaCadastro = horaCadastro;
     }
 
     public LocalDate getDataCadastro() {
