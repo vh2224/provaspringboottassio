@@ -4,7 +4,7 @@ Accept: application/json
 
 
 {
-  "id": 3,
+  "id": 5,
   "nome": "Tenis",
   "descricao": "Todo mundo usa",
   "fotoUrl": "https://havaianas.com.br/dw/image",
@@ -13,7 +13,7 @@ Accept: application/json
   "valorUnitario": "199.90",
   "categoriaList": [
     {
-      "id": 1
+      "id": 2
     }
   ]
 }
